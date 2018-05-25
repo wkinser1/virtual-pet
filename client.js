@@ -7,6 +7,7 @@ $(function() {
   $('.treat-button').click(clickedTreatButton);
   $('.play-button').click(clickedPlayButton);
   $('.exercise-button').click(clickedExerciseButton);
+  $('.discipline-button').click(clickedDisciplineButton);
   
 })
 
@@ -35,6 +36,14 @@ $(function() {
   }
   
   function clickedExerciseButton() {
+    // Decrease pet happiness
+    pet_info.happiness--;
+    // Decrease pet weight
+    pet_info.weight--;
+    checkAndUpdatePetInfoInHtml();
+  }
+
+  function clickedDisciplineButton() {
     // Decrease pet happiness
     pet_info.happiness--;
     // Decrease pet weight
