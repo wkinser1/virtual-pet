@@ -16,12 +16,12 @@ $(function() {
   var pet_info = {
     name: "Sparky",
     weight: 10,
-    happiness: 0,
+    happiness: 2,
   }
 
   function clickedTreatButton() {
     // Increase pet happiness
-    pet_info.happiness++;
+    pet_info.happiness = pet_info.happiness +1;
     // Increase pet weight
     pet_info.weight++;
     checkAndUpdatePetInfoInHtml();
@@ -65,7 +65,6 @@ $(function() {
     if (pet_info.happiness < 5)
     pet_info.happiness = 0;
     
-
   }
   
   // Updates your HTML with the current values in your pet_info dictionary
